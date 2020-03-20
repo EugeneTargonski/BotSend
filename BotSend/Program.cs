@@ -10,7 +10,7 @@ namespace BotSend
         static async Task SendMessage(string message)
         {
             var AccessToken = ConfigurationManager.AppSettings.Get("AccessToken");
-            var ChanellName = ConfigurationManager.AppSettings.Get("ChanellName");
+            var ChanellName = ConfigurationManager.AppSettings.Get("ChannelName");
 
             var bot = new TelegramBotClient(AccessToken);
             _ = bot.GetMeAsync().Result;
